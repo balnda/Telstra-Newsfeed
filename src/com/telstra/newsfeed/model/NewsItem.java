@@ -5,7 +5,7 @@ public class NewsItem {
 	private String title = "";
 	private String descr = "";
 	private String imageURL = "";
-	
+	private String cachedTime ;
 	public String getTitle() {
 		return title;
 	}
@@ -28,6 +28,14 @@ public class NewsItem {
 
 	public void setImageURL(String imageURL) {
 		this.imageURL = imageURL;
+	}
+
+	public String getCachedTime() {
+		return cachedTime;
+	}
+
+	public void setCachedTime(String cachedTime) {
+		this.cachedTime = cachedTime;
 	}
 
 	

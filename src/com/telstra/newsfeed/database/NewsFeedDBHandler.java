@@ -51,7 +51,7 @@ public class NewsFeedDBHandler extends SQLiteOpenHelper {
 		String CREATE_NEWSFEED_TABLE = "CREATE TABLE " +
 				TABLE_NEWSFEED + "("
 	             + COLUMN_NEWS_ID + " TEXT PRIMARY KEY," + COLUMN_TITLE 
-	             + " TEXT," + COLUMN_DESCR + " TEXT," + COLUMN_IMAGE_URL + " TEXT)";
+	             + " TEXT," + COLUMN_DESCR + " TEXT," + COLUMN_IMAGE_URL + " TEXT," +  COLUMN_CACHE_TIME + " TEXT)";
 	      db.execSQL(CREATE_NEWSFEED_TABLE);
 
 
@@ -71,7 +71,7 @@ public class NewsFeedDBHandler extends SQLiteOpenHelper {
 	public void addNewsFeed(List<NewsItem> newsItems) {
 		 SQLiteDatabase db = this.getWritableDatabase();
 		 
-		
+		 String path = db.getPath();
 		for(NewsItem newsItem : newsItems){
         ContentValues values = new ContentValues();
         values.put(COLUMN_NEWS_ID, NewsFeedUtil.getInt64HashCode(newsItem.getImageURL()));
@@ -79,7 +79,16 @@ public class NewsFeedDBHandler extends SQLiteOpenHelper {
         values.put(COLUMN_DESCR, newsItem.getDescr());
         values.put(COLUMN_IMAGE_URL, newsItem.getImageURL());
         
-      
+        Date myDate = new Date();
+        long timeMilliseconds = myDate.getTime();
+       
+        
+        
+        values.put(COLUMN_CACHE_TIME, timeMilliseconds);
+ 
+       
+        
+        db.insert(TABLE_NEWSFEED, null, values);
 		}
         db.close();
 }
@@ -97,7 +106,7 @@ public class NewsFeedDBHandler extends SQLiteOpenHelper {
 				newsItem.setTitle(cursor.getString(cursor.getColumnIndex(COLUMN_TITLE)));
 				newsItem.setDescr(cursor.getString(cursor.getColumnIndex(COLUMN_DESCR)));
 				newsItem.setImageURL(cursor.getString(cursor.getColumnIndex(COLUMN_IMAGE_URL)));
-				
+				newsItem.setCachedTime(cursor.getString(cursor.getColumnIndex(COLUMN_CACHE_TIME)));
 				newsItems.add(newsItem);
 				
 			} 
