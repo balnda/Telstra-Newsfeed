@@ -114,7 +114,7 @@ public class SplashScreen extends FragmentActivity  {
 		protected void onPostExecute(Void result) {
 			// TODO Auto-generated method stub
 			super.onPostExecute(result);
-			//launchNewsFeedActivity();
+			launchNewsFeedActivity();
 
 		}
 
@@ -123,7 +123,7 @@ public class SplashScreen extends FragmentActivity  {
 	}
 	private void launchNewsFeedActivity() {
 		Intent i = new Intent(SplashScreen.this, NewsFeedActivity.class);
-		//NewsFeedActivity.newsFeeds = newsItems;
+		NewsFeedActivity.newsFeeds = newsItems;
         startActivity(i);
 
         // close this activity
