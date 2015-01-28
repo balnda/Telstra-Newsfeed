@@ -82,7 +82,7 @@ public class JsonParser {
 			try {
 				jsonObj = new JSONObject(jsonString);
 			
-			
+				NewsFeedActivity.Title = (String)jsonObj.get(NewsFeedAppConstants.TITLE_TOP);
 			rows = jsonObj.getJSONArray(NewsFeedAppConstants.ROWS);
 			newsItems = new ArrayList<NewsItem>(rows.length());
 			for (int i = 0; i < rows.length(); i++) {
