@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="genre">#666666</color>
+    <color name="year">#888888</color>
+    <color name="list_divider">#d9d9d9</color>
+    <color name="list_row_start_color">#ffffff</color>
+    <color name="list_row_end_color">#ffffff</color>
+    <color name="list_row_hover_start_color">#ebeef0</color>
+    <color name="list_row_hover_end_color">#ebeef0</color>
+    <color name="confirmtxt_color">#999999</color>
+    <color name="updatebtn_color">#33b5e5</color>
+    <color name="cancelbtn_color">#0f1a27</color>
+    <color name="titile_txtcolor">#ffffff</color>
+    <color name="popup_divider_color">#10BEEA</color>
+    <color name="status_confirmtxt_color">#999999</color>
+</resources>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#282828" >
+
+    <RelativeLayout
+        android:id="@+id/relStatusID"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/status_popup_height" >
+
+        <TextView
+            android:id="@+id/titleConfirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/titile_txtcolor"
+            android:textSize="@dimen/status_title_textsize" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/popup_divider_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/dynamicView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relStatusID"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/status_confirmtxt_marginleft"
+        android:layout_marginRight="@dimen/status_confirmtxt_marginleft" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/UpdateStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dynamicView"
+        android:paddingBottom="@dimen/status_bottom_height" >
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/status_confirmtxt_marginleft"
+            android:layout_marginRight="@dimen/status_confirmtxt_marginleft"
+            android:layout_marginTop="@dimen/status_confirmtxt_marginTop"
+            android:background="@color/updatebtn_color"
+            android:text="@string/confirm_update"
+            android:textColor="@color/titile_txtcolor"
+            android:textSize="@dimen/status_btnStatus_textsize" >
+        </Button>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/btnUpdate"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="32.5dp"
+            android:layout_marginRight="32.5dp"
+            android:layout_marginTop="17.5dp"
+            android:background="@color/cancelbtn_color"
+            android:text="@string/confirm_cancel"
+            android:textColor="@color/confirmtxt_color"
+            android:textSize="@dimen/status_btnStatus_textsize" >
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>

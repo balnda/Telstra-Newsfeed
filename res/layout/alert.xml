@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/ExceptionMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop = "@dimen/status_confirmtxt_marginTop"
+        android:textColor="@color/status_confirmtxt_color"
+        android:textSize="@dimen/failure_msg_textsize"
+        android:autoLink="web"
+        android:maxLines = "12"
+		android:scrollbars = "vertical" />
+    
+    <TextView
+        android:id="@+id/message2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ExceptionMessage"
+        android:layout_marginTop = "10dp"
+        android:textColor="#999999"
+        android:textSize="12dp"
+        
+        android:autoLink="web"
+        android:visibility="gone" />
+    <TextView
+        android:id="@+id/message3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message2"
+        android:layout_marginTop = "10dp"
+        android:textColor="#999999"
+        android:textSize="12dp"
+        android:text=""
+        android:autoLink="web"
+        android:visibility="gone" />
+    
+
+</RelativeLayout>

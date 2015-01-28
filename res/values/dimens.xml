@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="progress_margin">35dp</dimen>
+     <dimen name="status_popup_height">78.5dp</dimen>
+    <dimen name="status_title_textsize">24dp</dimen>
+    <dimen name="status_divider_width">0.5dp</dimen>
+    <dimen name="status_bottom_height">23.5dp</dimen>
+    <dimen name="status_confirmtxt_marginTop">31.5dp</dimen>
+    <dimen name="status_confirmtxt_marginleft">32.5dp</dimen>
+    <dimen name="status_txt_marginleft">33dp</dimen>
+    <dimen name="status_confirmtxt_textsize">12dp</dimen>
+    <dimen name="status_statustxt_marginTop">10dp</dimen>
+    <dimen name="status_statustxt_margins">28dp</dimen>
+    <dimen name="status_statustxt_textsize">30dp</dimen>
+    <dimen name="status_btnUpdate_marginTop">27.5dp</dimen>
+    <dimen name="status_btnUpdateCancel_height">40dp</dimen>
+     <dimen name="status_btnUpdate_margins">27.5dp</dimen>
+    <dimen name="status_btnStatus_textsize">18dp</dimen>
+    <dimen name="status_btnCancel_marginTop">17.5dp</dimen>
+    <!--  Failure Alert Popup -->
+	<dimen name="failure_msg_textsize">17dp</dimen>
+
+</resources>

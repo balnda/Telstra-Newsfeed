@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back"
+    tools:context="${packageName}.${activityClass}" >   
+    
+   <!-- Image Logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="98dp"
+        android:src="@drawable/telstra_logo" />
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/txtAppTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Telstra News Feed"
+        android:textColor="#0000ff"
+        android:textSize="20dp" />
+    
+    <!-- Progress Bar -->
+     <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleSmall"
+        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"        
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtAppTitle"
+        android:paddingTop="@dimen/progress_margin"
+     />
+     
+     <!-- Loading Message -->
+      <TextView
+        android:id="@+id/txtLoadingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       	android:layout_centerHorizontal="true"
+        android:layout_below="@+id/progressBar1"       
+        android:text="Downloading News Feed data..." />
+
+</RelativeLayout>
