@@ -68,6 +68,9 @@ public class NewsFeedDBHandler extends SQLiteOpenHelper {
 
 	}
 	
+	/*
+	 * add the newsItems into the DB.
+	 */
 	public void addNewsFeed(List<NewsItem> newsItems) {
 		 SQLiteDatabase db = this.getWritableDatabase();
 		 
@@ -79,13 +82,11 @@ public class NewsFeedDBHandler extends SQLiteOpenHelper {
         values.put(COLUMN_DESCR, newsItem.getDescr());
         values.put(COLUMN_IMAGE_URL, newsItem.getImageURL());
         
-        Date myDate = new Date();
-        long timeMilliseconds = myDate.getTime();
-       
+        Date dt = new Date();
+        long timeMilliseconds = dt.getTime();      //get the current time
         
         
         values.put(COLUMN_CACHE_TIME, timeMilliseconds);
- 
        
         
         db.insert(TABLE_NEWSFEED, null, values);

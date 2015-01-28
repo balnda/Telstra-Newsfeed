@@ -37,6 +37,9 @@ public class JsonParser {
 
 	}
 
+	/*
+	 * method to download the JSON from the network location
+	 */
 	public String getJSONFromUrl(String url) {
 
 		// Making HTTP request
@@ -75,14 +78,17 @@ public class JsonParser {
 
 	}
 	
+	/*
+	 * Method to parse the json string and fill the NewsItem Pojo
+	 */
 	public List<NewsItem> getNewsItems(String jsonString)
 	{
 		if (jsonString != null) {
 			JSONObject jsonObj;
 			try {
 				jsonObj = new JSONObject(jsonString);
-			
-				NewsFeedActivity.Title = (String)jsonObj.get(NewsFeedAppConstants.TITLE_TOP);
+			//set the title field in the NewsFeedActivity, to be displayed on the title bar
+			NewsFeedActivity.Title = (String)jsonObj.get(NewsFeedAppConstants.TITLE_TOP);
 			rows = jsonObj.getJSONArray(NewsFeedAppConstants.ROWS);
 			newsItems = new ArrayList<NewsItem>(rows.length());
 			for (int i = 0; i < rows.length(); i++) {

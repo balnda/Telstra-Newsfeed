@@ -17,6 +17,10 @@ public class NetworkUtil {
 	public NetworkUtil(Context context){
         this._context = context;
     }
+	
+	/*
+	 * Utility method to check if we can connect to internet 
+	 */
 
 	public static boolean isConnectingToInternet(){
         ConnectivityManager connectivity = (ConnectivityManager) _context.getSystemService(Context.CONNECTIVITY_SERVICE);

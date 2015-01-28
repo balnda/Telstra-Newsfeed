@@ -150,6 +150,7 @@ public class SplashScreen extends FragmentActivity  {
 			@Override
 			public void onDialogPositiveClick(DialogFragment dialog) {
 				
+				//if db contains the data then show NewsFeedActivity else abort.
 				 if(dbHandler.fetchAllNewsFeeds().size() > 0)
 	        	   {
 	        		   launchNewsFeedActivity();
@@ -159,8 +160,7 @@ public class SplashScreen extends FragmentActivity  {
 	        		   System.exit(1);
 	        	   }
 	        	   
-				/*dialog.dismiss();
-				finish();*/
+				
 				
 			}
 
